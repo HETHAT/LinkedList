@@ -66,10 +66,10 @@ class DLinkedList:
             raise IndexError("Index out of range")
 
         while True:
-            if index == counter:
+            if index == counter:  # 69 ... noice
                 return item
             item = item.next
-            counter += 1  # 69 ... noice
+            counter += 1
 
     def insert(self, index: int, obj) -> None:
         """Insert object before index."""

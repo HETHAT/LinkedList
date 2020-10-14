@@ -15,6 +15,7 @@ class DLinkedList:
         self.head = self.last = self.current = None
         self.return_nodes = return_nodes
         self.len = 0
+        
         if data:
             if iterable:
                 self.extend(data)
@@ -41,8 +42,10 @@ class DLinkedList:
             stop = self.len
         start, stop = (start if start >= 0 else self.len + start,
                        stop if stop >= 0 else self.len + stop)
+        
         if start > stop or start > self.len - 1 or stop < 1:
             return None
+        
         index, item = 0, self.head
         while item is not None:
             if item.data == obj and start <= index < stop:
